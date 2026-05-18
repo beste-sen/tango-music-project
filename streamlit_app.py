@@ -1,8 +1,12 @@
 import streamlit as st
 import pandas as pd
+import os
 
 st.title("Tango Music Analytics")
 
-df = pd.read_csv("data/high_popularity_spotify_data.csv")
+st.write("Files in repo root:")
+st.write(os.listdir())
+
+df = pd.read_csv("high_popularity_spotify_data.csv")
 
 st.write(df.head())
